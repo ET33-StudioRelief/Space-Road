@@ -1,0 +1,147 @@
+/* CTA GRADIENT : HOVER*/
+.cta_content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta_content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #d8bd97 0%, #f5eee4 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.cta_content:hover::before {
+  opacity: 1;
+}
+
+/* Button component : HOVER */
+.button_component {
+  position: relative;
+  z-index: 1;
+}
+
+.button_component::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #d8bd97 0%, #f5eee4 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: inherit; /* Pour garder le même border-radius que le bouton */
+}
+
+.button_component:hover::before {
+  opacity: 1;
+}
+
+.button_arrow-wrapper {
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.button_component:hover .button_arrow-wrapper {
+  transform: translateX(
+    calc(25.3rem - 4rem)
+  ); /* Largeur du bouton moins un petit offset pour la flèche */
+}
+
+.button_content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.button_component .text-align-center {
+  transition: transform 0.3s ease;
+}
+
+.button_component:hover .button_content {
+  justify-content: flex-start;
+}
+
+.button_component:hover .text-align-center {
+  transform: translateX(-2.5rem); /* Ajustez cette valeur selon vos besoins */
+}
+
+@media screen and (min-width: 1580px) {
+  .solution_catch-text-content {
+    margin-top: 5rem;
+  }
+}
+
+/* NAVBAR */
+
+@media screen and (max-width: 1320px) {
+  .nav {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* LIST STYLE */
+.list li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em; /* Ajustez cette valeur selon vos besoins */
+  width: 8px; /* Taille du point */
+  height: 8px; /* Taille du point */
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 50%; /* Pour créer un cercle */
+}
+
+/* DECORATIVE SVG */
+@media screen and (min-width: 902px) and (max-width: 992px) {
+  .defis_decorativ-wrapper {
+    top: 10.8rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 623px) {
+  .defis_decorativ-wrapper {
+    top: 12.8rem;
+  }
+}
+
+@media screen and (min-width: 758px) and (max-width: 874px) {
+  .adaptability_decorativ-wrapper {
+    top: 10.8rem;
+  }
+}
+
+@media screen and (min-width: 594px) and (max-width: 758px) {
+  .adaptability_decorativ-wrapper {
+    top: 6rem;
+  }
+}
+
+@media screen and (max-width: 458px) {
+  .solution_decorativ-wrapper {
+    top: 14rem;
+  }
+}
+
+/*@media screen and (min-width: 480px) and (max-width: 623px) {
+    .adaptability_decorativ-wrapper
+    {
+        top: 12.8rem;
+    }
+}*/
