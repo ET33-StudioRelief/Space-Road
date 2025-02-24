@@ -1,26 +1,3 @@
-/* CTA GRADIENT : HOVER*/
-.cta_content {
-  position: relative;
-  z-index: 1;
-}
-
-.cta_content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, #d8bd97 0%, #f5eee4 100%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: -1;
-}
-
-.cta_content:hover::before {
-  opacity: 1;
-}
-
 /* Button component : HOVER */
 .button_component {
   position: relative;
@@ -109,15 +86,21 @@
 }
 
 /* DECORATIVE SVG */
-@media screen and (min-width: 902px) and (max-width: 992px) {
+@media screen and (min-width: 900px) and (max-width: 991px) {
   .defis_decorativ-wrapper {
-    top: 10.8rem;
+    top: 10.5rem;
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 623px) {
   .defis_decorativ-wrapper {
     top: 12.8rem;
+  }
+}
+
+@media screen and (min-width: 874px) and (max-width: 991px) {
+  .adaptability_decorativ-wrapper {
+    top: 8rem;
   }
 }
 
@@ -138,10 +121,3 @@
     top: 14rem;
   }
 }
-
-/*@media screen and (min-width: 480px) and (max-width: 623px) {
-    .adaptability_decorativ-wrapper
-    {
-        top: 12.8rem;
-    }
-}*/
