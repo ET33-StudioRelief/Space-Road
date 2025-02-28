@@ -463,3 +463,51 @@ export function bulletPointsApparition(): void {
     );
   });
 }
+
+/**
+ * Initializes footer animations
+ * Logo slides from top
+ * Content fades in with baseline animation
+ */
+export function initFooterAnimation(): void {
+  const footerLogo = document.querySelector('.footer_logo-wrapper');
+  const footerContent = document.querySelector('.footer_content');
+
+  if (!footerLogo || !footerContent) return;
+
+  // Initial state
+  gsap.set(footerLogo, {
+    opacity: 0,
+    y: -50,
+  });
+
+  gsap.set(footerContent, {
+    opacity: 0,
+  });
+
+  // Create timeline
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.footer_content',
+      start: 'top bottom-=100',
+      toggleActions: 'restart none none reset',
+    },
+    delay: 0.1,
+  });
+
+  // Animate logo and baseline content separately
+  tl.to(footerLogo, {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+  }).to(
+    footerContent,
+    {
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power1.inOut',
+    },
+    '<0.2'
+  );
+}

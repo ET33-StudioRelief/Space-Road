@@ -5,6 +5,7 @@ import {
   initCardAnimation,
   initCtaAnimation,
   initFeaturesCardAnimation,
+  initFooterAnimation,
   initHeadingAnimation,
   initHeroAnimation,
   initHeroImageAnimation,
@@ -23,3 +24,4 @@ initTestimonialAnimation();
 initFeaturesCardAnimation();
 initHeadingAnimation();
 bulletPointsApparition();
+initFooterAnimation();
