@@ -428,7 +428,7 @@ export function initHeadingAnimation(): void {
  * Each bullet appears with a scale and fade effect when scrolling into view
  */
 export function bulletPointsApparition(): void {
-  const bullets = document.querySelectorAll('.defi_list li');
+  const bullets = document.querySelectorAll('.defis_list li');
 
   if (!bullets.length) return;
 
@@ -442,7 +442,7 @@ export function bulletPointsApparition(): void {
   // Create timeline
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: '.defi_list',
+      trigger: '.defis_list',
       start: 'top bottom-=200',
       toggleActions: 'restart none none reset',
     },
