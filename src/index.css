@@ -99,19 +99,19 @@
 }
 
 @media screen and (min-width: 874px) and (max-width: 991px) {
-  .adaptability_decorativ-wrapper {
+  .features_decorativ-wrapper {
     top: 8rem;
   }
 }
 
 @media screen and (min-width: 758px) and (max-width: 874px) {
-  .adaptability_decorativ-wrapper {
+  .features_decorativ-wrapper {
     top: 10.8rem;
   }
 }
 
 @media screen and (min-width: 594px) and (max-width: 758px) {
-  .adaptability_decorativ-wrapper {
+  .features_decorativ-wrapper {
     top: 6rem;
   }
 }

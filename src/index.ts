@@ -1,11 +1,15 @@
 import './index.css';
 
 import {
+  bulletPointsApparition,
   initCardAnimation,
   initCtaAnimation,
+  initFeaturesCardAnimation,
+  initHeadingAnimation,
   initHeroAnimation,
   initHeroImageAnimation,
   initParallaxImage,
+  initTestimonialAnimation,
   initVehiculeAnimation,
 } from './utils/gsap';
 
@@ -15,3 +19,7 @@ initHeroImageAnimation();
 initVehiculeAnimation();
 initCtaAnimation();
 initParallaxImage();
+initTestimonialAnimation();
+initFeaturesCardAnimation();
+initHeadingAnimation();
+bulletPointsApparition();
