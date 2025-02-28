@@ -268,57 +268,6 @@ export function initParallaxImage(): void {
 }
 
 /**
- * Initializes animation for testimonial sections
- */
-export function initTestimonialAnimation(): void {
-  const testimonialLeft = document.querySelector('#testimonial-left');
-  const testimonialRight = document.querySelector('#testimonial-right');
-
-  if (!testimonialLeft || !testimonialRight) return;
-
-  // Initialiser les éléments comme invisibles
-  gsap.set([testimonialLeft, testimonialRight], {
-    opacity: 0,
-  });
-
-  // Créer la timeline
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.section_testimonial',
-      start: 'top center',
-      toggleActions: 'restart none none reset', // Rejoue à chaque entrée dans le viewport
-    },
-  });
-
-  // Animer les témoignages
-  tl.fromTo(
-    testimonialLeft,
-    {
-      x: -100,
-      opacity: 0,
-    },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power3.out',
-    }
-  ).fromTo(
-    testimonialRight,
-    {
-      x: 100,
-      opacity: 0,
-    },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power3.out',
-    }
-  );
-}
-
-/**
  * Initializes the animation for service cards
  * Each card appears with a scale and fade effect when scrolling into view
  */

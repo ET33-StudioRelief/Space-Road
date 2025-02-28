@@ -10,7 +10,6 @@ import {
   initHeroAnimation,
   initHeroImageAnimation,
   initParallaxImage,
-  initTestimonialAnimation,
   initVehiculeAnimation,
 } from './utils/gsap';
 
@@ -20,7 +19,6 @@ initHeroImageAnimation();
 initVehiculeAnimation();
 initCtaAnimation();
 initParallaxImage();
-initTestimonialAnimation();
 initFeaturesCardAnimation();
 initHeadingAnimation();
 bulletPointsApparition();
