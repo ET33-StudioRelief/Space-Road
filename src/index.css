@@ -18,19 +18,9 @@
   border-radius: inherit; /* Pour garder le même border-radius que le bouton */
 }
 
-.button_component:hover::before {
-  opacity: 1;
-}
-
 .button_arrow-wrapper {
   transform: translateX(0);
   transition: transform 0.3s ease;
-}
-
-.button_component:hover .button_arrow-wrapper {
-  transform: translateX(
-    calc(25.3rem - 4rem)
-  ); /* Largeur du bouton moins un petit offset pour la flèche */
 }
 
 .button_content {
@@ -43,12 +33,24 @@
   transition: transform 0.3s ease;
 }
 
-.button_component:hover .button_content {
-  justify-content: flex-start;
-}
+@media screen and (min-width: 992px) {
+  .button_component:hover::before {
+    opacity: 1;
+  }
 
-.button_component:hover .text-align-center {
-  transform: translateX(-2.5rem); /* Ajustez cette valeur selon vos besoins */
+  .button_component:hover .button_arrow-wrapper {
+    transform: translateX(
+      calc(25.3rem - 4rem)
+    ); /* Largeur du bouton moins un petit offset pour la flèche */
+  }
+
+  .button_component:hover .button_content {
+    justify-content: flex-start;
+  }
+
+  .button_component:hover .text-align-center {
+    transform: translateX(-2.5rem); /* Ajustez cette valeur selon vos besoins */
+  }
 }
 .w-input {
   color: var(--text-color--text-invert) !important;
