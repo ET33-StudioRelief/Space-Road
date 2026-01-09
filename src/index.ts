@@ -12,6 +12,7 @@ import {
   initParallaxImage,
   initVehiculeAnimation,
 } from './utils/gsap';
+import { initContactModal, initContactPhoneValidation } from './utils/modal';
 
 initCardAnimation();
 initHeroAnimation();
@@ -23,3 +24,5 @@ initFeaturesCardAnimation();
 initHeadingAnimation();
 bulletPointsApparition();
 initFooterAnimation();
+initContactModal();
+initContactPhoneValidation();

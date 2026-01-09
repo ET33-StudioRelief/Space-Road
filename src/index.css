@@ -50,7 +50,9 @@
 .button_component:hover .text-align-center {
   transform: translateX(-2.5rem); /* Ajustez cette valeur selon vos besoins */
 }
-
+.w-input {
+  color: var(--text-color--text-invert) !important;
+}
 @media screen and (min-width: 1580px) {
   .solution_catch-text-content {
     margin-top: 5rem;
