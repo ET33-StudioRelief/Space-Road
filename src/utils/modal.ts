@@ -94,6 +94,34 @@ export function initContactModal(): void {
     }
   });
 }
+
+/**
+ * Hide (and disable) the first option for select inputs marked with:
+ * `ms-code="hide-first-option"`.
+ *
+ * This matches the previous Webflow embed script behavior.
+ */
+export function initHideFirstOptionSelectInputs(): void {
+  const selects = document.querySelectorAll<HTMLSelectElement>(
+    'select[ms-code="hide-first-option"]'
+  );
+
+  if (selects.length === 0) {
+    return;
+  }
+
+  selects.forEach((select) => {
+    const firstOption = select.options.item(0);
+
+    if (!firstOption) {
+      return;
+    }
+
+    // Prevent the placeholder option from being selectable/visible in the dropdown.
+    firstOption.hidden = true;
+    firstOption.disabled = true;
+  });
+}
 /**
  * Validation of the phone field (FR format) for input[type="tel"].
  */

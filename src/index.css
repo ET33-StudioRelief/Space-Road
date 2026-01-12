@@ -55,6 +55,10 @@
 .w-input {
   color: var(--text-color--text-invert) !important;
 }
+.w-select {
+  color: rgba(6, 36, 65, 0.5) !important;
+}
+
 @media screen and (min-width: 1580px) {
   .solution_catch-text-content {
     margin-top: 5rem;
